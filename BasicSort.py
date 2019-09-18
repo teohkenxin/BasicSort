@@ -9,10 +9,10 @@ def selection_sort(array):
 
 
 def bubble_sort(array):
-    for first_number in range(0, len(array)):
-        for second_number in range (first_number+1, len(array)):
-            if array[second_number] < array[first_number]:
-                array[second_number], array[first_number] = array[first_number], array[second_number]
+    for i in range(0, len(array)): 
+        for number in range (0, len(array)-i-1): 
+            if array[number] > array[number+1]:
+                array[number+1], array[number] = array[number], array[number+1] 
     return array
 
 def insertion_sort(array):
