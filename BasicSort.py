@@ -16,13 +16,13 @@ def bubble_sort(array):
     return array
 
 def insertion_sort(array):
-    for border in range(1, len(array)):
-        last_value = border-1
-        newMember = array[border]
-        while last_value >= 0 and array[last_value] > newMember:
-            array[last_value+1] = array[last_value]
-            last_value -= 1
-        array[last_value+1] = newMember
+    for border in range(1, len(array)): #start from index 1 until the end.
+        last_index = border-1 #the index of the first number in front of the border
+        newMember = array[border] #the first number behind the border
+        while last_index >= 0 and array[last_index] > newMember: #while last_index is not lower than 0 and array[last_index] is bigger than the newMember 
+            array[last_index+1] = array[last_index] #push array[last_index] to array[last_index + 1]
+            last_index -= 1 #minus tail_index, repeat until it becomes lower than 0 (which breaks the loop)
+        array[last_index+1] = newMember
     return array
 
 unordered = [64, 25, 12, 22, 11]
